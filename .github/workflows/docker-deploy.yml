@@ -27,4 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/secure-upload-app:latest
+          tags: sakthi05/secure-upload-app:latest
