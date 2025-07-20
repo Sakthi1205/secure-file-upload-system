@@ -1,0 +1,167 @@
+/* Base Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Light Mode Background */
+body {
+  background: linear-gradient(135deg, #5b247a, #1bcedf);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s ease;
+}
+
+/* Container Style */
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  width: 360px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  position: relative;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 1.2rem;
+  color: #5b247a;
+}
+
+/* File Input Style */
+input[type="file"] {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+/* Upload Button */
+button {
+  padding: 0.7rem 1.5rem;
+  background: #1bcedf;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #17a2b8;
+}
+
+/* Drag & Drop Zone */
+.drop-zone {
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.drop-zone.dragover {
+  background: #f0faff;
+  border-color: #1bcedf;
+}
+
+/* Link Container */
+#linkContainer {
+  margin-top: 1rem;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  color: #5b247a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Copy Button */
+.copy-btn {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 0.4rem 0.7rem;
+  background: #5b247a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.copy-btn:hover {
+  background: #44205c;
+}
+
+/* Toggle Dark Mode */
+.toggle-switch {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  background: #eee;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.toggle-switch:hover {
+  background: #ddd;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark Mode Styles */
+body.dark {
+  background: linear-gradient(135deg, #1b1b1b, #2e2e2e);
+}
+
+body.dark .container {
+  background: #2b2b2b;
+  color: #f2f2f2;
+}
+
+body.dark h1 {
+  color: #1bcedf;
+}
+
+body.dark a {
+  color: #1bcedf;
+}
+
+body.dark .copy-btn {
+  background: #1bcedf;
+  color: #000;
+}
+
+body.dark .copy-btn:hover {
+  background: #17a2b8;
+}
+
+body.dark .toggle-switch {
+  background: #444;
+  color: #fff;
+}
