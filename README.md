@@ -53,17 +53,23 @@ A secure file upload and download system built with Node.js and AWS S3, allowing
 ### 📦 Backend Setup
 
 1. **Clone the repository**
+   
 git clone https://github.com/your-username/secure-file-sharing.git
+
 cd secure-file-sharing
 
 2.**Install dependencies**
+
 npm install
 
 3.**Create a .env file (at the root)**
+
 AWS_ACCESS_KEY_ID=your_access_key
+
 AWS_SECRET_ACCESS_KEY=your_secret_key
 
 4.**Run the server**
+
 node upload.js
 
 🌐 Server runs at: http://localhost:3000
@@ -78,12 +84,18 @@ You will receive a download link valid for 5 minutes
 Share the link or use it to download immediately
 
 ### ⚙️ Terraform Setup
+
 1.**Navigate to the Terraform directory:**
+
 cd terraform
 
+
 2.**Initialize and apply the config:**
+
 terraform init
+
 terraform plan
+
 terraform apply
 
 3.**This will:**
