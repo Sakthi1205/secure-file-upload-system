@@ -4,12 +4,6 @@ A secure file upload and download system built with Node.js and AWS S3, allowing
 
 ---
 
-## 📸 Demo
-
-> 🎥 Preview: [Upload a file ➡️ Get a secure download link ➡️ Share ➡️ Auto-expiry in 5 mins]
-
----
-
 ## 🚀 Features
 
 - 🔒 Secure file upload to AWS S3
