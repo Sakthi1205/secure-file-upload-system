@@ -1,16 +1,26 @@
-# Dockerfile
-FROM node:18-alpine
+# Use a small Node image
+FROM node:20-alpine
 
-# Create app directory
+# App dir
 WORKDIR /app
 
-# Install app dependencies
+# Install only what's needed
 COPY package*.json ./
-RUN npm install
+RUN npm ci --omit=dev
 
-# Bundle app source
+# Copy code
 COPY . .
 
-# Expose port and run server
+# Ensure temp upload dir exists
+RUN mkdir -p uploads
+
+# Environment (can be overridden at runtime)
+ENV NODE_ENV=production \
+    PORT=3000
+
+# Healthcheck (optional but nice)
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s \
+  CMD wget -qO- http://localhost:3000/ || exit 1
+
 EXPOSE 3000
 CMD ["node", "server.js"]
