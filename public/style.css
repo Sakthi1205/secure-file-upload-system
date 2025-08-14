@@ -58,21 +58,6 @@ button:hover {
   background: #17a2b8;
 }
 
-/* Drag & Drop Zone */
-.drop-zone {
-  border: 2px dashed #ccc;
-  border-radius: 12px;
-  padding: 1rem;
-  margin: 1rem 0;
-  cursor: pointer;
-  transition: border-color 0.3s, background 0.3s;
-}
-
-.drop-zone.dragover {
-  background: #f0faff;
-  border-color: #1bcedf;
-}
-
 /* Link Container */
 #linkContainer {
   margin-top: 1rem;
@@ -91,41 +76,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-/* Copy Button */
-.copy-btn {
-  display: inline-block;
-  margin-left: 8px;
-  padding: 0.4rem 0.7rem;
-  background: #5b247a;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.copy-btn:hover {
-  background: #44205c;
-}
-
-/* Toggle Dark Mode */
-.toggle-switch {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  cursor: pointer;
-  background: #eee;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  transition: background 0.3s, color 0.3s;
-}
-
-.toggle-switch:hover {
-  background: #ddd;
 }
 
 /* Fade In Animation */
@@ -150,18 +100,4 @@ body.dark h1 {
 
 body.dark a {
   color: #1bcedf;
-}
-
-body.dark .copy-btn {
-  background: #1bcedf;
-  color: #000;
-}
-
-body.dark .copy-btn:hover {
-  background: #17a2b8;
-}
-
-body.dark .toggle-switch {
-  background: #444;
-  color: #fff;
 }
